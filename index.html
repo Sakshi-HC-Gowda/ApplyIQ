@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ApplyIQ is a transparent job and internship intelligence dashboard.">
+  <title>ApplyIQ | Opportunity Intelligence</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="ApplyIQ home">
+        <span class="brand-mark">A</span>
+        <span><strong>ApplyIQ</strong><small>Opportunity intelligence</small></span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a class="nav-link is-active" href="#dashboard" data-view="dashboard"><span>01</span> Overview</a>
+        <a class="nav-link" href="#applications" data-view="applications"><span>02</span> Applications</a>
+        <a class="nav-link" href="#discover" data-view="discover"><span>03</span> Discover Jobs</a>
+        <a class="nav-link" href="#analytics" data-view="analytics"><span>04</span> Analytics</a>
+        <a class="nav-link" href="#settings" data-view="settings"><span>05</span> Settings</a>
+      </nav>
+      <div class="sidebar-note"><span class="live-dot"></span><span>Local workspace<br><small>Your data stays in this browser</small></span></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" type="button" data-action="toggle-menu" aria-label="Open navigation">Menu</button>
+        <div class="breadcrumb"><span>Workspace</span><b>/</b><strong id="page-label">Overview</strong></div>
+        <div class="topbar-actions">
+          <button class="icon-button" type="button" data-action="toggle-theme" aria-label="Toggle color theme"><span id="theme-icon">Dark</span></button>
+          <button class="avatar" type="button" data-view="settings" aria-label="Open settings">SJ</button>
+        </div>
+      </header>
+
+      <div class="page-wrap">
+        <section class="view is-visible" id="view-dashboard" data-view-panel="dashboard">
+          <div class="page-heading">
+            <div><p class="eyebrow" id="today-label"></p><h1>Good morning, <em>builder.</em></h1><p class="subheading">A clear view of where your next opportunity stands.</p></div>
+            <button class="button button-primary" type="button" data-action="open-add"><span class="button-symbol">+</span> Add application</button>
+          </div>
+          <div class="stats-grid" id="stats-grid"></div>
+          <div class="content-grid">
+            <section class="panel pipeline-panel">
+              <div class="panel-heading"><div><p class="eyebrow">Live pipeline</p><h2>Recent applications</h2></div><a class="text-link" href="#applications" data-view="applications">View all <span>-></span></a></div>
+              <div id="dashboard-applications"></div>
+            </section>
+            <aside class="panel focus-panel">
+              <div class="panel-heading"><div><p class="eyebrow">Your focus</p><h2>Skill readiness</h2></div><span class="sparkle">*</span></div>
+              <div id="focus-content"></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="view-applications" data-view-panel="applications">
+          <div class="page-heading compact-heading"><div><p class="eyebrow">Opportunity tracker</p><h1>Your applications</h1><p class="subheading">Keep every opportunity moving with intention.</p></div><button class="button button-primary" type="button" data-action="open-add"><span class="button-symbol">+</span> Add application</button></div>
+          <section class="toolbar panel"><div class="search-wrap"><span class="search-icon">/</span><label class="sr-only" for="search-input">Search applications</label><input id="search-input" type="search" placeholder="Search company, role, skills..." autocomplete="off"></div><div class="filter-row"><select id="status-filter" aria-label="Filter by status"><option value="">All statuses</option></select><select id="priority-filter" aria-label="Filter by priority"><option value="">All priorities</option></select><select id="type-filter" aria-label="Filter by job type"><option value="">All types</option></select><select id="location-filter" aria-label="Filter by location"><option value="">All locations</option></select><select id="sort-select" aria-label="Sort applications"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="company-asc">Company A-Z</option><option value="company-desc">Company Z-A</option><option value="match-desc">Highest match</option><option value="match-asc">Lowest match</option><option value="deadline">Nearest deadline</option></select></div></section>
+          <div class="results-meta"><span id="results-count"></span><button class="clear-filters" type="button" data-action="clear-filters">Clear filters</button></div>
+          <div class="applications-grid" id="applications-list"></div>
+        </section>
+
+        <section class="view" id="view-discover" data-view-panel="discover">
+          <div class="page-heading compact-heading"><div><p class="eyebrow">Live opportunity feed</p><h1>Discover Jobs</h1><p class="subheading">Explore current roles and bring the right ones into your pipeline.</p></div><button class="button button-secondary" type="button" data-action="refresh-jobs">Refresh jobs</button></div>
+          <section class="toolbar panel"><div class="search-wrap"><span class="search-icon">/</span><label class="sr-only" for="job-search-input">Search discovered jobs</label><input id="job-search-input" type="search" placeholder="Search title, company, location..." autocomplete="off"></div><span class="results-count" id="jobs-count"></span></section>
+          <div id="jobs-status" class="jobs-status" aria-live="polite"></div>
+          <div class="jobs-grid" id="jobs-list"></div>
+        </section>
+
+        <section class="view" id="view-analytics" data-view-panel="analytics">
+          <div class="page-heading compact-heading"><div><p class="eyebrow">Performance review</p><h1>Search analytics</h1><p class="subheading">See the patterns behind your progress.</p></div><button class="button button-secondary" type="button" data-action="export-csv">Export CSV</button></div>
+          <div class="analytics-grid"><section class="panel chart-panel"><div class="panel-heading"><div><p class="eyebrow">Pipeline health</p><h2>Applications by status</h2></div></div><div id="status-chart"></div></section><section class="panel missing-panel"><div class="panel-heading"><div><p class="eyebrow">Skill intelligence</p><h2>Most requested gaps</h2></div></div><div id="missing-skills"></div></section></div>
+          <section class="panel insights-panel"><div class="panel-heading"><div><p class="eyebrow">Practical signals</p><h2>What the numbers say</h2></div></div><div class="insight-grid" id="insight-grid"></div></section>
+        </section>
+
+        <section class="view" id="view-settings" data-view-panel="settings">
+          <div class="page-heading compact-heading"><div><p class="eyebrow">Workspace preferences</p><h1>Settings</h1><p class="subheading">Tune your profile and keep your data portable.</p></div></div>
+          <div class="settings-grid"><section class="panel settings-panel"><div class="panel-heading"><div><p class="eyebrow">Matching profile</p><h2>Personal skills</h2></div></div><p class="panel-copy">Add skills you can confidently bring to an opportunity. Matching is transparent and based on exact normalized names.</p><form id="skills-form"><label for="skills-input">Skills <span class="label-hint">comma separated</span></label><textarea id="skills-input" rows="4" placeholder="JavaScript, HTML, CSS, SQL, Git"></textarea><button class="button button-primary" type="submit">Save skills</button></form><div class="skill-pills" id="personal-skills"></div></section><section class="panel settings-panel"><div class="panel-heading"><div><p class="eyebrow">Data controls</p><h2>Portable by design</h2></div></div><p class="panel-copy">Your applications are stored locally in this browser. Export a CSV before changing devices or clearing your workspace.</p><div class="settings-actions"><button class="button button-secondary" type="button" data-action="export-csv">Download CSV</button><button class="button button-quiet" type="button" data-action="clear-samples">Remove sample applications</button><button class="button button-danger" type="button" data-action="reset-data">Reset workspace</button></div><div class="privacy-note"><strong>Storage status</strong><span id="storage-status">Ready</span></div></section></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modal-backdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-header"><div><p class="eyebrow">Opportunity record</p><h2 id="modal-title">Add application</h2></div><button class="icon-button close-button" type="button" data-action="close-modal" aria-label="Close dialog">Close</button></div><form id="application-form" novalidate><input type="hidden" id="application-id"><div class="form-grid"><div class="field"><label for="company">Company <span>*</span></label><input id="company" name="company" required maxlength="80"><small class="field-error" data-error-for="company"></small></div><div class="field"><label for="role">Role <span>*</span></label><input id="role" name="role" required maxlength="100"><small class="field-error" data-error-for="role"></small></div><div class="field"><label for="location">Location <span>*</span></label><input id="location" name="location" required maxlength="80" placeholder="Remote or city"><small class="field-error" data-error-for="location"></small></div><div class="field"><label for="jobType">Job type <span>*</span></label><select id="jobType" name="jobType" required></select><small class="field-error" data-error-for="jobType"></small></div><div class="field"><label for="applicationDate">Application date <span>*</span></label><input id="applicationDate" name="applicationDate" type="date" required><small class="field-error" data-error-for="applicationDate"></small></div><div class="field"><label for="deadline">Deadline <span class="label-hint">optional</span></label><input id="deadline" name="deadline" type="date"><small class="field-error" data-error-for="deadline"></small></div><div class="field"><label for="status">Status <span>*</span></label><select id="status" name="status" required></select><small class="field-error" data-error-for="status"></small></div><div class="field"><label for="priority">Priority <span>*</span></label><select id="priority" name="priority" required></select><small class="field-error" data-error-for="priority"></small></div><div class="field field-wide"><label for="applicationUrl">Application URL <span class="label-hint">optional</span></label><input id="applicationUrl" name="applicationUrl" type="url" placeholder="https://..."><small class="field-error" data-error-for="applicationUrl"></small></div><div class="field field-wide"><label for="requiredSkills">Required skills <span class="label-hint">comma separated</span></label><input id="requiredSkills" name="requiredSkills" placeholder="JavaScript, SQL, Git"><small class="field-error" data-error-for="requiredSkills"></small></div><div class="field field-wide"><label for="notes">Notes <span class="label-hint">optional</span></label><textarea id="notes" name="notes" rows="3" maxlength="500" placeholder="What stands out about this opportunity?"></textarea><small class="field-error" data-error-for="notes"></small></div></div><div class="modal-footer"><button class="button button-quiet" type="button" data-action="close-modal">Cancel</button><button class="button button-primary" type="submit">Save application</button></div></form></section></div>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
