@@ -58,7 +58,6 @@ The profile includes:
 
 The profile is stored locally and used throughout the application.
 
-> **Screenshot:** Add your **Create Workspace / Onboarding** screenshot here.
 
 ---
 
@@ -82,7 +81,6 @@ It displays:
 
 The dashboard is dynamically updated as the user interacts with the application.
 
-> **Screenshot:** Add your **Dashboard** screenshot here.
 
 ---
 
@@ -112,7 +110,6 @@ Supported application stages include:
 - Selected
 - Rejected
 
-> **Screenshot:** Add your **Applications page with multiple application cards** here.
 
 ---
 
@@ -150,7 +147,6 @@ Applications can be sorted based on available application information such as:
 
 This allows users to quickly find the opportunities that require attention.
 
-> **Screenshot:** Add your **Applications page showing search/filter/sort controls** here.
 
 ---
 
@@ -175,7 +171,6 @@ Each job may include:
 
 Users can search the retrieved opportunities without making a new API request for every search.
 
-> **Screenshot:** Add your **Discover Jobs page showing live job cards** here.
 
 ---
 
@@ -200,7 +195,6 @@ Dashboard & Analytics
 
 Duplicate protection prevents the same opportunity from being added repeatedly.
 
-> Screenshot: Add a screenshot showing "Save to ApplyIQ" / "Already saved" here.
 
 ## 🧠 Skill Matching
 
@@ -242,8 +236,6 @@ A match percentage is then calculated based on the available skill information.
 
 This helps users understand whether they are already prepared for an opportunity or whether they should focus on specific skills first.
 
-> Screenshot: Add your Skill Match / Missing Skills / Readiness screenshot here.
-
 ## 📊 Analytics
 
 The Analytics section provides insights into the user's application pipeline.
@@ -260,8 +252,6 @@ It includes information such as:
 
 The analytics are calculated from the user's existing application data.
 
-> Screenshot: Add your Analytics page screenshot here.
-
 ## ⏰ Deadline Awareness
 
 Applications can contain deadlines and due dates.
@@ -273,8 +263,6 @@ ApplyIQ identifies different deadline conditions such as:
 * Upcoming
 
 This helps users prioritize applications and assessments that require immediate attention.
-
-> Screenshot: Add your application cards showing deadline indicators here.
 
 ## 👤 Profile and Settings
 
@@ -291,8 +279,6 @@ The profile includes:
 Changes are immediately reflected throughout the application.
 
 The application also calculates a profile readiness percentage based on the completeness of the user's profile.
-
-> Screenshot: Add your Settings / Profile page screenshot here.
 
 ## 💾 Local Data Persistence
 
@@ -331,8 +317,6 @@ The exported data can include information such as:
 
 This allows users to keep an external copy of their application information.
 
-> Screenshot: Add your CSV export result / downloaded spreadsheet screenshot here if you want to demonstrate this feature.
-
 ## 🌙 Theme Support
 
 ApplyIQ supports light and dark themes.
@@ -350,8 +334,6 @@ It supports:
 * Mobile
 
 The layout includes responsive navigation, forms, cards, grids, and job listings.
-
-> Screenshot: Add one mobile/responsive screenshot here.
 
 ## 🛠️ Technology Stack
 
