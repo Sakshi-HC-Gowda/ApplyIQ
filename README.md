@@ -469,6 +469,50 @@ ApplyIQ/
 
 The main application logic is implemented in `script.js`, while the interface structure and styling are handled by `index.html` and `style.css`.
 
+## 📸 Application Screenshots
+
+### 1. User Onboarding
+
+Create a personalized workspace by providing your target role, experience level, preferred locations, and skills.
+
+![ApplyIQ Onboarding](screenshots/onboarding.png)
+
+### 2. Personalized Dashboard
+
+The dashboard provides an overview of applications, interviews, selections, deadlines, skill-match scores, and current focus areas.
+
+![ApplyIQ Dashboard](screenshots/dashboard.png)
+
+### 3. Add Application
+
+ApplyIQ allows users to add opportunities with company, role, location, job type, deadline, status, priority, application URL, and required skills.
+
+![Add Application Form](screenshots/application-form.png)
+
+### 4. Application Management
+
+Track job and internship opportunities with CRUD operations, search, filtering, sorting, status, priority, deadlines, and required skills.
+
+![ApplyIQ Applications](screenshots/applications.png)
+
+### 5. Discover Jobs
+
+Discover live job opportunities using the external job API, search available roles, and save relevant opportunities directly to the application tracker.
+
+![ApplyIQ Discover Jobs](screenshots/discover-jobs.png)
+
+### 6. Analytics
+
+Analyze application progress, status distribution, skill gaps, average skill match, interview rate, and selection rate.
+
+![ApplyIQ Analytics](screenshots/analytics.png)
+
+### 7. Settings & Profile
+
+Manage personal skills, workspace data, and export application information.
+
+![ApplyIQ Settings](screenshots/settings.png)
+
 ## 🚀 Getting Started
 
 ### Prerequisites
