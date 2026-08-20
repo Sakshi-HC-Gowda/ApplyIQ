@@ -184,6 +184,7 @@ Users can search the retrieved opportunities without making a new API request fo
 A discovered opportunity can be saved directly into the user's ApplyIQ application tracker.
 
 The flow is:
+````text
 Discover Job
      ↓
 View Opportunity
@@ -195,6 +196,7 @@ Application Record
 Skill Matching
      ↓
 Dashboard & Analytics
+````
 
 Duplicate protection prevents the same opportunity from being added repeatedly.
 
