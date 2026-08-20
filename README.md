@@ -469,6 +469,14 @@ ApplyIQ/
 
 The main application logic is implemented in `script.js`, while the interface structure and styling are handled by `index.html` and `style.css`.
 
+## 🔗 Live Demo
+
+ 👉 [View Live Application](https://sakshi-hc-gowda.github.io/applyiq-job-internship-tracker/)
+
+ ## 💻 GitHub Repository
+
+👉 [View Source Code](https://github.com/Sakshi-HC-Gowda/ApplyIQ)
+
 ## 📸 Application Screenshots
 
 ### 1. User Onboarding
