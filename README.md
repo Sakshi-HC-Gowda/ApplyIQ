@@ -453,7 +453,7 @@ The main application logic is implemented in `script.js`, while the interface st
 
 ## 🔗 Live Demo
 
- 👉 [View Live Application](https://sakshi-hc-gowda.github.io/applyiq-job-internship-tracker/)
+ 👉 [View Live Application](https://sakshi-hc-gowda.github.io/ApplyIQ/)
 
  ## 💻 GitHub Repository
 
