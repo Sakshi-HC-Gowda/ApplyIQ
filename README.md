@@ -1,3 +1,189 @@
+# ApplyIQ
+
+### Smart Job & Internship Opportunity Intelligence Platform
+
+ApplyIQ is a browser-based JavaScript application designed to help students and early-career developers manage their job and internship search in one place.
+
+Instead of simply storing application records, ApplyIQ combines opportunity discovery, skill matching, application tracking, deadline awareness, and analytics to help users make better decisions during their job search.
+
+---
+
+## 📌 Problem Statement
+
+Students applying for internships and entry-level jobs often manage opportunities across multiple websites, spreadsheets, notes, and bookmarks.
+
+This makes it difficult to answer questions such as:
+
+- Which opportunities have I already applied to?
+- Which applications need my attention?
+- How well do my current skills match a role?
+- Which skills am I missing?
+- Which applications are approaching their deadlines?
+- How is my application pipeline progressing?
+
+ApplyIQ brings these activities together into a single browser-based workspace.
+
+---
+
+## 🎯 Objectives
+
+The main objectives of ApplyIQ are to:
+
+- Organize job and internship applications.
+- Discover job opportunities from an external jobs API.
+- Compare personal skills with required job skills.
+- Identify missing skills for each opportunity.
+- Track application progress.
+- Highlight upcoming deadlines.
+- Provide application analytics.
+- Persist user data using browser Local Storage.
+- Provide a responsive and accessible interface.
+- Apply JavaScript concepts learned throughout the internship to a practical project.
+
+---
+
+# ✨ Key Features
+
+## 1. Personalized Workspace
+
+On the first visit, users can create their personal ApplyIQ workspace.
+
+The profile includes:
+
+- Name
+- Target role
+- Experience level
+- Preferred locations
+- Personal skills
+
+The profile is stored locally and used throughout the application.
+
+> **Screenshot:** Add your **Create Workspace / Onboarding** screenshot here.
+
+---
+
+## 2. Personalized Dashboard
+
+The dashboard provides an overview of the user's job search.
+
+It displays:
+
+- Total applications
+- Applied applications
+- Interviews
+- Assessments
+- Selected applications
+- Rejected applications
+- Average skill match
+- Open opportunities
+- Recent applications
+- Skill readiness
+- Important next actions
+
+The dashboard is dynamically updated as the user interacts with the application.
+
+> **Screenshot:** Add your **Dashboard** screenshot here.
+
+---
+
+## 3. Application Management
+
+ApplyIQ provides complete CRUD functionality for managing applications.
+
+Users can:
+
+- Create applications
+- View applications
+- Edit applications
+- Delete applications
+- Track application status
+- Set priority
+- Add deadlines
+- Add required skills
+- Store application URLs
+- Add notes
+
+Supported application stages include:
+
+- Wishlist
+- Applied
+- Online Assessment
+- Interview
+- Selected
+- Rejected
+
+> **Screenshot:** Add your **Applications page with multiple application cards** here.
+
+---
+
+## 4. Search, Filter and Sort
+
+Applications can be searched and organized using multiple controls.
+
+### Search
+
+Users can search by:
+
+- Company
+- Role
+- Location
+- Skills
+- Notes
+
+### Filters
+
+Applications can be filtered by:
+
+- Status
+- Priority
+- Job type
+- Location
+
+### Sorting
+
+Applications can be sorted based on available application information such as:
+
+- Newest
+- Oldest
+- Deadline
+- Match score
+
+This allows users to quickly find the opportunities that require attention.
+
+> **Screenshot:** Add your **Applications page showing search/filter/sort controls** here.
+
+---
+
+# 🔎 Discover Jobs
+
+ApplyIQ includes a dedicated **Discover Jobs** section for finding real job opportunities.
+
+Job listings are retrieved using the **Fetch API** from the public Arbeitnow Job Board API.
+
+The application processes the returned JSON data and dynamically displays job cards.
+
+Each job may include:
+
+- Job title
+- Company
+- Location
+- Remote status
+- Job type
+- Description
+- Required tags/skills
+- Original job URL
+
+Users can search the retrieved opportunities without making a new API request for every search.
+
+> **Screenshot:** Add your **Discover Jobs page showing live job cards** here.
+
+---
+
+## 🔗 Saving Discovered Jobs
+
+A discovered opportunity can be saved directly into the user's ApplyIQ application tracker.
+
+The flow is:
 Discover Job
      ↓
 View Opportunity
