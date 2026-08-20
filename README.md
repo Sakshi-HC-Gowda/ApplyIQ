@@ -431,3 +431,202 @@ The application follows a client-side architecture.
             │
        Local Storage
 ```
+The Discover Jobs feature additionally communicates with the external API:
+
+```text
+ApplyIQ
+   │
+   │ Fetch API
+   ↓
+Arbeitnow Job Board API
+   │
+   │ JSON
+   ↓
+Normalize Job Data
+   │
+   ↓
+Render Job Cards
+   │
+   ↓
+Save to ApplyIQ
+   │
+   ↓
+Existing Application State
+```
+
+## 📂 Project Structure
+
+```text
+ApplyIQ/
+│
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── assets/
+    └── ...
+```
+
+The main application logic is implemented in `script.js`, while the interface structure and styling are handled by `index.html` and `style.css`.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Install:
+
+* A modern web browser
+* Node.js (for development/testing)
+* Git
+
+### Clone the Repository
+
+```bash
+git clone <YOUR-GITHUB-REPOSITORY-URL>
+cd ApplyIQ
+```
+
+### Run Locally
+
+Because ApplyIQ is a static web application, it can be served using a simple local server.
+
+For example:
+
+```bash
+python -m http.server 8000
+```
+
+Then open:
+
+http://localhost:8000
+
+Alternatively, the project can be opened using a suitable VS Code development server.
+
+## 🔌 API Integration
+
+ApplyIQ uses the public Arbeitnow Job Board API to retrieve job opportunities.
+
+### API documentation
+
+https://www.arbeitnow.com/api/job-board-api
+
+The application:
+
+* Sends a Fetch request.
+* Waits for the asynchronous response.
+* Validates the HTTP response.
+* Parses the JSON response.
+* Normalizes job information.
+* Renders the opportunities dynamically.
+* Allows users to save opportunities into ApplyIQ.
+
+Error handling is included so that the core application remains usable if the external API is unavailable.
+
+## 🛡️ Error Handling
+
+The application handles common runtime situations such as:
+
+* Invalid form input
+* Missing profile information
+* Invalid application data
+* Invalid URLs
+* Local Storage errors
+* Invalid stored JSON
+* API request failures
+* Empty API responses
+
+When the external jobs API fails, ApplyIQ provides a fallback state instead of making the entire application unusable.
+
+## 🧪 Testing
+
+The project was tested for:
+
+* JavaScript syntax validity
+* Profile creation
+* Profile persistence
+* Dashboard personalization
+* Profile editing
+* Application CRUD
+* Search
+* Filtering
+* Sorting
+* Skill matching
+* Analytics
+* CSV export
+* Discover Jobs
+* API data rendering
+* Save to ApplyIQ
+* Duplicate protection
+* API failure fallback
+* Local Storage persistence
+* Responsive mobile layout
+
+JavaScript syntax was checked using:
+
+```bash
+node --check script.js
+```
+
+## ⚠️ Current Limitations
+
+The current version is intentionally designed as a client-side JavaScript mini project.
+
+Therefore:
+
+* User data is stored locally in the browser.
+* There is no server-side authentication.
+* There is no shared database between devices.
+* Job discovery depends on the availability of the external API.
+* The current API integration retrieves the available job feed rather than maintaining a proprietary job database.
+
+These limitations are intentional for the scope of the project.
+
+## 🔮 Future Enhancements
+
+Possible future improvements include:
+
+* Backend API
+* User authentication
+* Cloud database
+* Cross-device synchronization
+* More advanced job recommendation algorithms
+* Resume integration
+* Automated application reminders
+* More job sources
+* Advanced skill-gap recommendations
+* Application calendar
+* Email notifications
+
+## 🎓 Internship Learning Outcome
+
+ApplyIQ was developed as an independent mini project after completing the JavaScript internship tasks.
+
+The project brings together the concepts learned progressively throughout the internship:
+
+```text
+JavaScript Fundamentals
+        ↓
+Conditions & Loops
+        ↓
+Functions, Arrays, Strings & Objects
+        ↓
+DOM Manipulation & Events
+        ↓
+Asynchronous JavaScript & Fetch API
+        ↓
+CRUD + Local Storage
+        ↓
+Independent JavaScript Project
+        ↓
+                    ApplyIQ
+```
+
+The project demonstrates how individual JavaScript concepts can be combined to build a practical browser-based application rather than isolated programming exercises.
+
+## 👩‍💻 Author
+
+**Sakshi H C**
+
+Computer Science and Engineering
+
+**Shri Madhwa Vadiraja Institute of Technology and Management**
